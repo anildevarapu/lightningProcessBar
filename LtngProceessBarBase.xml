@@ -1,0 +1,70 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" >
+<ltng:require styles="{! $Resource.MySLDS + '/assets/styles/salesforce-lightning-design-system.css'}"/>
+ <aura:attribute name="currentSection" type="String" default="section1" description="This is the current section value."/>
+
+<div class="slds-grid">
+  <button class="slds-button slds-button--icon-border-filled slds-path__trigger slds-no-flex slds-m-horizontal--small" title="Open">
+
+<c:svg class="slds-icon" ariaHidden="true" xlinkHref="{! $Resource.MySLDS + 'assets/icons/utility-sprite/svg/symbols.svg#chevrondown'}"/>
+	
+    <span class="slds-assistive-text">Open</span>
+  </button>
+  <div class="slds-tabs--path" role="application">
+    <ul class="slds-tabs--path__nav" role="tablist">
+      <li class="slds-tabs--path__item slds-is-complete" role="presentation">
+        <a class="slds-tabs--path__link" id="tabs-path-101" aria-controls="content-path-1" aria-selected="false" tabindex="-1" role="tab" href="javascript:void(0);" aria-live="assertive">
+          <span class="slds-tabs--path__stage">
+
+			<c:svg class="slds-icon" ariaHidden="true" xlinkHref="/resource/SLDS0122/assets/icons/utility-sprite/svg/symbols.svg#check"/>
+			
+            <span class="slds-assistive-text">Stage Complete</span>
+          </span>
+          <span class="slds-tabs--path__title">Contacted</span>
+        </a>
+      </li>
+      <li class="slds-tabs--path__item slds-is-complete" role="presentation">
+        <a class="slds-tabs--path__link" id="tabs-path-102" aria-controls="content-path-1" aria-selected="false" tabindex="-1" role="tab" href="javascript:void(0);" aria-live="assertive">
+          <span class="slds-tabs--path__stage">
+           <c:svg class="slds-icon" ariaHidden="true" xlinkHref="{! $Resource.MySLDS + 'assets/icons/utility-sprite/svg/symbols.svg#check'}"/>
+			
+			
+            <span class="slds-assistive-text">Stage Complete</span>
+          </span>
+          <span class="slds-tabs--path__title">Open</span>
+        </a>
+      </li>
+      <li class="slds-tabs--path__item slds-is-current" role="presentation">
+        <a class="slds-tabs--path__link" id="tabs-path-103" aria-controls="content-path-1" aria-selected="false" tabindex="-1" role="tab" href="javascript:void(0);" aria-live="assertive">
+          <span class="slds-tabs--path__stage">
+           <c:svg class="slds-icon" ariaHidden="true" xlinkHref="{! $Resource.MySLDS + 'assets/icons/utility-sprite/svg/symbols.svg#check'}"/>
+          </span>
+          <span class="slds-tabs--path__title">Unqualified</span>
+        </a>
+      </li>
+      <li class="slds-tabs--path__item slds-is-incomplete" role="presentation">
+        <a class="slds-tabs--path__link" id="tabs-path-104" aria-controls="content-path-1" aria-selected="false" tabindex="-1" role="tab" href="javascript:void(0);" aria-live="assertive">
+          <span class="slds-tabs--path__stage">
+            <c:svg class="slds-icon" ariaHidden="true" xlinkHref="{! $Resource.MySLDS + 'assets/icons/utility-sprite/svg/symbols.svg#check'}"/>
+          </span>
+          <span class="slds-tabs--path__title">Nurturing</span>
+        </a>
+      </li>
+      <li class="slds-tabs--path__item slds-is-incomplete" role="presentation">
+        <a class="slds-tabs--path__link" id="tabs-path-105" aria-controls="content-path-1" aria-selected="false" tabindex="-1" role="tab" href="javascript:void(0);" aria-live="assertive">
+          <span class="slds-tabs--path__stage">
+            <c:svg class="slds-icon" ariaHidden="true" xlinkHref="{! $Resource.MySLDS + 'assets/icons/utility-sprite/svg/symbols.svg#check'}"/>
+          </span>
+          <span class="slds-tabs--path__title">Closed</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <button class="slds-button slds-button--brand slds-path__mark-complete slds-no-flex slds-m-horizontal--small">
+    <c:svg class="slds-icon" ariaHidden="true" xlinkHref="{! $Resource.MySLDS + 'assets/icons/utility-sprite/svg/symbols.svg#check'}"/>Mark Status as Complete</button>
+</div>
+    
+<div class="slds-docked-form-footer">
+  <button onclick="{!c.prevAction}"  type="button" class="slds-button slds-button--neutral">Previous</button>
+  <button onclick="{!c.nextAction}" type="button" class="slds-button slds-button--brand">Next</button>
+</div>    
+</aura:component>

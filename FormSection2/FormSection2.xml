@@ -1,0 +1,24 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" >
+	<!-- listen to the Event -->
+    <aura:handler event="c:nextPrevEventProcessBar" action="{!c.respondToEvent}"/>
+    
+    <form class="slds-form--inline">
+        <div aura:id="myDiv" class="slds-hide">
+  <div class="slds-form-element">
+    <label class="slds-form-element__label" for="name">Name</label>
+    <div class="slds-form-element__control">
+      <input type="text" id="name" class="slds-input" />
+    </div>
+  </div>
+  <div class="slds-form-element">
+    <label class="slds-form-element__label" for="email">Email</label>
+    <div class="slds-form-element__control">
+      <input type="text" id="email" class="slds-input" />
+    </div>
+  </div>
+  <div class="slds-form-element">
+    <button type="button" class="slds-button slds-button--brand" onclick="{!c.showHideDiv}">Send</button>
+  </div>
+   </div>
+</form>
+</aura:component>
